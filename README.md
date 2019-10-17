@@ -8,24 +8,52 @@
 
  ### Examples
 
- **List all characters**
+ **List one character by id**
  
  ```
  query{
-
+  character(id: 3){
+    id 
     name
-  
+    planet
+    status
+   }
  }
    ```
 
- **List all characters alive**
+ **List all caracters by name  **
+ ```
+ query{
+  character(name:"pepe"){
+    id 
+    name
+    palnet
+    status
+  }
+ }
+   ```
+   **List all characters by name, status and plantet**
+```
+ query{
+  character(name:"pepe",status:"Alive",planet:"nose"){
+    id 
+    name
+    palnet
+    status
+  }
+ }
+   ```
  
- `npm start -- list --status="alive" --pag=2`
+ **Configure the page number and the pache size in characters **
  
- **List all characters by name**
+ ```
+ query{
+  character(page:2,pageSize:13,name:"pepe",status:"Alive",planet:"nose"){
+    id 
+    name
+    palnet
+    status
+  }
+ }
+   ```
  
- `npm start -- list --search="legs" --pag=3`
- 
- **Show all the information of the characters with that name**
- 
- `npm start -- view --name="legs"`
