@@ -10,11 +10,13 @@
 
  **List all characters**
  
- ```query{
+ ```
+ query{
 
-     name
+    name
   
-    }´´´
+ }
+   ```
 
  **List all characters alive**
  
