@@ -12,9 +12,9 @@
  
  ```query{
 
-  name
+     name
   
-}
+    }´´´
 
  **List all characters alive**
  
